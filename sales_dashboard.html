@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Sales Dashboard</title>
   <!-- Include AdminLTE CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/css/adminlte.min.css">
   <!-- Include Bootstrap for form styling -->
@@ -77,9 +77,6 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-
-
-
   <!-- Content Wrapper -->
   <div class="content-wrapper">
     <section class="content">
@@ -87,19 +84,49 @@
         <!-- Dashboard content here -->
         <div class="row">
           <div class="col-lg-3 col-6">
-            <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
-                <p>New Orders</p>
+                <h3 id="mostSoldItem">50</h3>
+                <p>Most Sold Item</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="fas fa-chart-line"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- Add more small boxes here -->
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3 id="mostActiveSeller">John Doe</h3>
+                <p>Most Active Seller</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3 id="overallSales">$5000</h3>
+                <p>Overall Sales (Last Week)</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3 id="customMetric">75%</h3>
+                <p>Custom Metric</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-percentage"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -77,24 +77,14 @@
          
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="item_list.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Item List</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="add_item.html" class="nav-link">
+                <a href="add_item.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Item</p>
                 </a>
               </li>
+
+              
             </ul>
-
-
-
-
-
           </li>
         <!-- </li> -->
           <!-- Sales Tracking -->
@@ -117,99 +107,62 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-
   <!-- Content Wrapper -->
   <div class="content-wrapper">
     <section class="content">
       <div class="container-fluid">
-        <!-- Search Filter Form -->
+        <!-- User List -->
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Filter Items</h3>
+            <h3 class="card-title">User List</h3>
             <div class="card-tools">
-              <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                <i class="fas fa-minus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="card-body">
-            <form id="searchForm" action="/items/search" method="get">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="searchName">Item Name</label>
-                    <input type="text" class="form-control" id="searchName" name="name" placeholder="Search by name">
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="searchCategory">Category</label>
-                    <select class="form-control" id="searchCategory" name="category">
-                      <option value="">All Categories</option>
-                      <option value="electronics">Electronics</option>
-                      <option value="clothing">Clothing</option>
-                      <option value="books">Books</option>
-                      <!-- Add more options as needed -->
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="searchPriceRange">Price Range</label>
-                    <input type="text" class="form-control" id="searchPriceRange" name="price_range" placeholder="e.g., 10-50">
-                  </div>
+              <!-- Search form -->
+              <div class="input-group input-group-sm" style="width: 200px;">
+                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Search</button>
-            </form>
-          </div>
-        </div>
-
-        <!-- Item List Grid -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Item List</h3>
-            <div class="card-tools">
-              <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                <i class="fas fa-minus"></i>
-              </button>
             </div>
           </div>
-          <div class="card-body">
-            <table class="table table-bordered table-striped">
+          <!-- /.card-header -->
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
               <thead>
                 <tr>
-                  <th>Item ID</th>
+                  <th>ID</th>
                   <th>Name</th>
-                  <th>Description</th>
-                  <th>Quantity</th>
-                  <th>Price</th>
-                  <th>Category</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Status</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                <!-- Example item rows -->
                 <tr>
                   <td>1</td>
-                  <td>Item 1</td>
-                  <td>Item 1 description</td>
-                  <td>10</td>
-                  <td>$10.00</td>
-                  <td>Electronics</td>
+                  <td>John Doe</td>
+                  <td>johndoe@example.com</td>
+                  <td>Admin</td>
+                  <td><span class="badge bg-success">Active</span></td>
                   <td>
-                    <a href="/items/edit/1" class="btn btn-sm btn-primary">Edit</a>
-                    <a href="/items/delete/1" class="btn btn-sm btn-danger">Delete</a>
+                    <a href="user_edit.html" class="btn btn-info btn-sm">Edit</a>
+                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
                   </td>
                 </tr>
-                <!-- More item rows will be dynamically generated here -->
+                <!-- More rows as needed -->
               </tbody>
             </table>
           </div>
+          <!-- /.card-body -->
         </div>
+        <!-- /.card -->
       </div>
+      <!-- /.container-fluid -->
     </section>
+    <!-- /.content -->
   </div>
+  <!-- /.content-wrapper -->
   <!-- Footer -->
   <footer class="main-footer">
     <!-- Footer content here -->

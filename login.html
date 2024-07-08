@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Super Admin Login</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/css/adminlte.min.css">
-</head>
-<body class="hold-transition login-page">
+{% extends "common_layout.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
 <div class="login-box">
   <div class="login-logo">
-    <b>Super Admin</b>Login
+    <a href="#"><b>Admin</b>LTE</a>
   </div>
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
-      <form action="/login" method="post">
+      <form action="login" method="post">
         <div class="input-group mb-3">
-          <input type="email" name="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" placeholder="Email" name="email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -22,7 +18,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" name="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" name="password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -33,7 +29,9 @@
           <div class="col-8">
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
-              <label for="remember">Remember Me</label>
+              <label for="remember">
+                Remember Me
+              </label>
             </div>
           </div>
           <div class="col-4">
@@ -42,12 +40,9 @@
         </div>
       </form>
       <p class="mb-1">
-        <a href="/password-reset">I forgot my password</a>
+        <a href="forgot_password.html">I forgot my password</a>
       </p>
     </div>
   </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/js/adminlte.min.js"></script>
-</body>
-</html>
+{% endblock %}
